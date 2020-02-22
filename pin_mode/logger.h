@@ -123,8 +123,8 @@ public:
   };
 
   u32 save_cond(CondStmt &cond) {
-    u32 i = num_cond;
     num_cond++;
+    u32 i = num_cond;
     save_tag(cond.lb1);
     save_tag(cond.lb2);
     cond_buf.push_bytes((char *)&cond, sizeof(CondStmt));
